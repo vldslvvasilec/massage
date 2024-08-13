@@ -1,0 +1,176 @@
+@import '../../App.scss';
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $header-bg-color;
+  color: $header-text-color;
+  padding: 1% 2%;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  font-family: "Manrope", sans-serif;
+
+  .header-logo {
+    img {
+      width:4rem;
+      max-height: 10vh;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .header-nav {
+    flex: 1;
+    overflow: hidden;
+
+    .header-menu {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      .header-item {
+        margin: 0 2vw;
+
+        a {
+          color: $header-text-color;
+          text-decoration: none;
+          font-weight: bold;
+          font-size: 1rem;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .header-lang-switcher {
+    display: flex;
+    align-items: center;
+    transition: transform 0.5s;
+
+    .lang-switcher-btn {
+      display: flex;
+      align-items: center;
+      background: none;
+      border: none;
+      color: $header-text-color;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+
+      .custom-flag {
+        margin-right: 0.5rem;
+        height: 1rem;
+        width: auto;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+    }
+    
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+  .small-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 2em 3%;
+    svg {
+      stroke: $header-text-color;
+      stroke-width: 4;
+      width: 2em;
+      height: 2em;
+      opacity: 0.8;
+    }
+  } 
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 10%;
+  right: 5%;
+  display: none; /* Кнопка скрыта по умолчанию */
+  background-color: $header-bg-color;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  font-size: 24px;
+  z-index: 1000;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+  svg {
+    fill: $header-text-color;
+  }
+}
+
+.scroll-to-top.visible {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll-to-top:hover {
+  background-color: $footer-bg-color;
+}
+
+
+@media (max-width: 700px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    padding: 2% 4%;
+
+    .headerNavWrap,
+    .header-lang-switcher {
+      display: none;
+    }
+    .small-menu {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+      margin: 1.3em 3%;
+    }
+    .header-logo {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  
+    .header-nav {
+      margin-top: 3em;
+      margin-bottom: 15%;
+      .header-menu {
+        flex-direction: column;
+        align-items: flex-start;
+  
+        .header-item {
+          margin: 3% 1%;
+        }
+      }
+    }
+    .lang-switcher-btn {
+      padding: 0;
+    }
+  }
+}

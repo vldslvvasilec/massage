@@ -1,0 +1,210 @@
+@import '../../../../App.scss';
+@import '../../animations.scss';
+
+.services {
+    width: 100%;
+    padding-top: 2%;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.service-gold,
+.service-hot,
+.service-price {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+.service-gold-tittle {
+    &::before {
+        content: var(--gold-bg-text);
+    }
+}
+.service-hot-tittle {
+    &::before {
+        content: var(--hot-bg-text);
+    }
+}
+.service-price-tittle {
+    &::before {
+        content: var(--price-bg-text);
+    }
+}
+
+.service-gold-tittle,
+.service-hot-tittle,
+.service-price-tittle {
+    position: relative;
+    text-align: center;
+    font-size: 3em;
+    font-weight: 600;
+    margin-bottom: 5%;
+    color: $main-tittle-color;
+    &::before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 3em;
+        color: $main-bg-text-color;
+        white-space: nowrap;
+        z-index: -1;
+        pointer-events: none;
+        letter-spacing: 2vw;
+        font-family: "Dancing Script", cursive;
+    }
+}
+
+.service-gold-content,
+.service-hot-content {
+    width: 90%;
+    position: relative;
+}
+
+.service-gold-description,
+.service-hot-description {
+    font-size: 1.3em;
+    text-align: justify;
+    margin-bottom: 20px;
+    color: $main-text-color;
+}
+
+.service-gold-img,
+.service-hot-img {
+    float: left;
+    margin: 0 5% 3% 0;
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+}
+
+.service-hot-img {
+    float: right;
+    margin: 0 0 3% 5%;
+}
+
+.service-price-description {
+    text-align: center;
+    width: 90%;
+    font-size: 1.3em;
+    color: $main-text-color;
+}
+.service-price-content {
+    width: 70%;
+    border: 1px solid $main-price-border-color;
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.prices {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    position: relative;
+    padding: 2% 2%;
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 5%;
+        width: 90%;
+        border-bottom: 1px solid $main-price-border-color;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+.pricesImg {
+    width: 8%;
+    margin: 2.5%;
+    opacity: 0.5;
+    filter: invert(42%) sepia(20%) saturate(1500%) hue-rotate(200deg) brightness(90%) contrast(90%);
+}
+.pricesDetails {
+    width: 65%;
+}
+.pricesDetailsTitle {
+    font-size: 1.5em;
+    font-weight: 500;
+
+}
+.pricesDetailsBefore {
+    font-size: 1.2em;
+    opacity: 0.7;
+}
+.pricesPrice {
+    width: 20%;
+    text-align: center;
+    color: $main-price-color;
+    font-weight: 700;
+    font-size: 2em;
+    text-wrap: nowrap;
+}
+
+@media (max-width: 768px) {
+    .service-gold-tittle,
+    .service-hot-tittle,
+    .service-price-tittle {
+    font-size: 2em;
+    }
+    .service-gold-description,
+    .service-hot-description,
+    .service-price-description {
+        font-size: 1.1em;
+    }
+    .service-price-content {
+        width: 90%;
+    }
+}
+
+@media (max-width: 600px) {
+    .pricesImg {
+        width: 15%;
+    }
+}
+
+@media (max-width: 435px) {
+    .service-gold-img,
+    .service-hot-img {
+        width: 90%;
+        margin: 5% 0 8% 0;
+        float: none;
+    }
+
+    .service-gold-tittle,
+    .service-hot-tittle,
+    .service-price-tittle {
+        &::before {
+            font-size: 2em;
+        }
+    }
+    .service-gold-content,
+    .service-hot-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .prices {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .pricesDetails {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+    .pricesDetailsTitle {
+        font-size: 1.2em;
+    }
+    .pricesDetailsBefore {
+    font-size: 1em;
+    }
+}

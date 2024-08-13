@@ -1,0 +1,312 @@
+@import '../../../../App.scss';
+@import '../../animations.scss';
+
+.booking {
+    width: 100%;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.booking-tittle,
+.reservation-form-tittle {
+    position: relative;
+    text-align: center;
+    font-size: 2.8em;
+    font-weight: 600;
+    margin-bottom: 5%;
+    color: $main-tittle-color;
+
+    &::before {
+        content: var(--booking-tittle-bg-text);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 3em;
+        color: $main-bg-text-color;
+        white-space: nowrap;
+        z-index: -1;
+        pointer-events: none;
+        letter-spacing: 2vw;
+        font-family: "Dancing Script", cursive;
+    }
+}
+
+.booking-content {
+    width: 80%;
+    margin: 0 auto;
+    img {
+        float: right;
+        margin: 0 0 15px 15px;
+        width: 30%;
+        height: auto;
+        object-fit: cover;
+        box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.4);
+        border-radius: 8px;
+    }
+
+    p {
+        margin: 10% 0;
+        width: 65%;
+        font-size: 1.4em;
+        text-align: justify;
+        color: $main-text-color; 
+    }
+}
+
+.reservation-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2% 0;
+    min-height: 70vh;
+}
+
+.reservation-form-wrap {
+    width:80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.reservation-form-details {
+    width: 50%;
+}
+
+.reservation-form-name,
+.reservation-form-email {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5%;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    label {
+        width: 20%;
+        text-align: end;
+    }
+    input {
+        width: 75%;
+    }
+}
+.reservation-form-email {
+    margin-bottom: 20px;
+}
+
+.reservation-form-calendar {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flatpickr-hiden-input {
+    display: none;
+}
+
+.form-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.form, .thank-you-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.thank-you-message {
+    background-color: #f0f8ff;
+    border: 1px solid #dcdcdc;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    min-height: 70vh;
+}
+
+
+input {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+input.input-error {
+  border-color: red;
+}
+
+button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+
+  &:disabled {
+    background-color: #b0bec5;
+    cursor: not-allowed;
+  }
+}
+
+.error-message {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+
+.flatpickr-weekdays {
+    background-color: aqua;
+    color: #666;
+    font-weight: bold;
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+.flatpickr-weekday {
+    text-align: center;
+    font-size: 130%;
+}
+
+.flatpickr-day {
+    font-size: 1.5em;
+    line-height: 2.5rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &.selected,
+    &.selected:hover {
+        background-color: #007bff;
+        color: white;
+    }
+}
+
+.flatpickr-time {
+    background-color: #f8f8f8;
+    border-top: 1px solid #ccc;
+    border-radius: 0 0 8px 8px;
+}
+
+.flatpickr-months .flatpickr-current-month {
+    font-size: 1.3rem;
+}
+
+@media (max-width: 1200px) {
+    .booking-content {
+        p {
+            margin: 0;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .booking-content {
+        width: 90%;
+        img {
+            width: 45%;
+            float: right;
+            margin: 0 0 1% 3%;
+        }
+        p {
+            width: 100%;
+            font-size: 1.2em;
+            margin-top: 0;
+        }
+    }
+    .reservation-form-wrap {
+        width: 90%;
+    }
+}
+
+@media (max-width: 680px) {
+    .booking-content {
+        width: 94%;
+        img {
+            width: 50%;
+        }
+        p {
+            font-size: 1.1em;
+        }
+    }
+    .reservation-form-details {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        margin-top: 5%;
+    }
+    .reservation-form-wrap {
+        width: 94%;
+        flex-direction: column-reverse;
+        
+        .reservation-form-name,
+        .reservation-form-email {
+            flex-direction: column;
+            align-items: flex-start;
+            margin: 0;
+            width: 48%;
+            label {
+                text-align: start;
+                width: 100%;
+            }
+            input {
+                width: 90%;
+            }
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .booking-content {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        img {
+            width: 90%;
+            margin-top: 5%;
+        }
+    }
+    .reservation-form-details {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 5%;
+    }
+    .reservation-form-wrap {
+        .reservation-form-name,
+        .reservation-form-email {
+            width: 100%;
+            align-items: center;
+            label {
+                text-align: center;
+            }
+        }
+    }
+
+    .booking-tittle,
+    .reservation-form-tittle {
+        font-size: 2.5em;
+        &::before {
+            font-size: 1.8em;
+        }
+    }
+}

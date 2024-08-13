@@ -1,0 +1,273 @@
+@import '../../../../App.scss';
+@import '../../animations.scss';
+
+.fade-in-image {
+    animation: fadeIn 1s ease-in-out;
+    width: 100%;
+    min-height: auto;
+    max-height: 100vh;
+    display: block;
+}
+
+.overlay-section {
+    width: 80%;
+    height: 70%;
+    animation: sectionFadeIn .8s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    right: 10%;
+    bottom: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: center;
+    align-items: center;
+    padding: 5%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    color: $header-text-color;
+    text-align: center;
+    font-size: 1.7em;
+    font-weight: 600;
+    font-family: 'Roboto', 'Arial'
+}
+
+.startBlokButtons {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link-left, .link-right {
+    padding: 2% 3%;
+    color: $header-text-color;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: .5s;
+    &:hover {
+        background-color: $header-slide-bg-color;
+    }
+}
+
+.link-left {
+    animation: slideInLeft 1s ease-in-out;
+}
+
+.link-right {
+    animation: slideInRight 1s ease-in-out;
+}
+
+
+.home-offer {
+    position: relative;
+    padding: 3% 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5% 0;
+    &::before {
+        content: var(--offer-bg-text);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 15em;
+        color: $main-bg-text-color;
+        white-space: nowrap;
+        z-index: -1;
+        pointer-events: none;
+        letter-spacing: 2vw;
+        font-family: "Dancing Script", cursive;
+    }
+
+    .home-offer-tittle {
+        width: 40%;
+        font-size: 4em;
+        color: $main-tittle-color;
+        font-family: "Cormorant Garamond", serif;
+    }
+
+    .home-offer-description {
+        width: 55%;
+        font-size: 1.1rem;
+        color: $main-text-color;
+    }
+}
+
+.home-about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5%;
+    .home-about-tittle {
+        position: relative;
+        padding: 7% 0;
+        font-size: 4em;
+        color: $main-tittle-color;
+        font-family: "Cormorant Garamond", serif;
+        width: 80%;
+        text-align: center;
+        &::before {
+            content: var(--about-bg-text);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 10rem;
+            color: $main-bg-text-color;
+            white-space: nowrap;
+            z-index: -1;
+            pointer-events: none;
+            letter-spacing: 2vw;
+            font-family: "Dancing Script", cursive;
+        }
+    }
+    .home-about-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        p {
+            width: 55%;
+            font-size: 1.1rem;
+            color: $main-text-color;
+        }
+        img {
+            width: 43%;
+            border-radius: 10px;
+            box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.6);
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .overlay-section {
+        top: 25%;
+        bottom: 5%;
+    }
+    .startBlokButtons {
+        width: 80%;
+    }
+    .home-offer {
+        flex-direction: column;
+        align-items: center;
+        .home-offer-tittle {
+            width: 90%;
+            font-size: 3.5em;
+            text-align: center;
+            margin-bottom: 5%;
+        }
+        .home-offer-description {
+            width: 90%;
+            font-size: 1.5em;
+        }
+    }
+    .home-about {
+        .home-about-tittle {
+            font-size: 3.5em;
+            width: 90%;
+            &::before {
+                font-size: 7rem;
+                text-wrap: wrap;
+            }
+        }
+        .home-about-content {
+            flex-direction: column-reverse;
+            p, img {
+                width: 90%;
+                font-size: 1.5em;
+            }
+            img {
+                margin-bottom: 5%;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .fade-in-image {
+        min-height: 60vh;
+        width: 100%;
+    }
+    .overlay-section {
+        width: 90%;
+        left: 5%;
+        right: 5%;
+    }
+}
+
+@media (max-width: 625px) {
+    .overlay-section {
+        font-size: 1.2em;
+    }
+    .home-offer {
+        flex-direction: column;
+        align-items: center;
+        &::before {
+            font-size: 10em;
+        }
+        .home-offer-tittle {
+            width: 90%;
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 5%;
+        }
+        .home-offer-description {
+            width: 90%;
+            font-size: 1.2em;
+        }
+    }
+    .home-about {
+        .home-about-tittle {
+            font-size: 2.5em;
+            &::before {
+                font-size: 5rem;
+            }
+        }
+        .home-about-content {
+            p {
+                font-size: 1.2em;
+            }
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .fade-in-image {
+        min-height: 75vh;
+        width: 100%;
+    }
+    .overlay-section {
+        font-size: 1.15em;
+    }
+    .startBlokButtons {
+        width: 90%;
+    }
+
+    .home-offer {
+        &::before {
+            font-size: 7em;
+        }
+        .home-offer-tittle {
+            font-size: 2em;
+        }
+    }
+    .home-about {
+        .home-about-tittle {
+            font-size: 2em;
+            margin-bottom: 5%;
+            &::before {
+                font-size: 2em;
+            }
+        }
+    }
+    .home-offer-description,
+    .home-about-content {
+        width: 100%;
+        text-align: center;
+    }
+}

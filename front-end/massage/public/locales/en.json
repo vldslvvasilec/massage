@@ -1,0 +1,60 @@
+{
+    "home": "HOME",
+    "services": "SERVICES",
+    "booking": "BOOKING",
+    "contact": "CONTACT",
+    "footer-contact": "Contact",
+    "footer-static-tittle": "Gold Tantric Massage", 
+    "footer-static-content": "Ultimately a Tantric Massage Company, providing exceptional visiting tantric massage services in the comfort of your luxury hotel room and private Yach in Cannes, as well as In Call requests to Central Cannes locations of our expert tantric massage therapists.", 
+
+    "services-page": "Service Page",
+    "booking-page": "Booking Page",
+    "contacts-page": "Contacts Page",
+
+    "offer-bg-text": "Offer",
+    "offer-tittle": "Gold Tantric Massage",
+    "offer-description": "We offer high quality services at the space where every client feels relaxed, secure and authentic: Their own private place or in our place. Understanding the uniqueness and the needs of every person, In Yacht Massage we try to exceed your expectations and even challenge ourselves by constantly setting higher goals. Our company’s aspiration is to give a new meaning to the term “mobile massage” and take it to a new dimension where quality and trust can be taken for granted. Associating our brand name with high class quality service, is essential to us.",
+
+    "about-bg-text": "About",
+    "about-tittle": "Gold Tantric Massage services for your yacht",
+    "about-description": "Experienced professionals available for high quality massage services on yachts in Cannes and all over French Riviera, Enjoy your Yacht in Cannes, we are here for you 365 days a year… Embark on a profound journey of self-discovery exploration with the assistance of Cannes premier tantric massage therapists at Gold Tantric Cannes. As a client-focused massage, we specialize in tantric massage techniques to foster a sense of overall, healing, and deep relaxation. Whether you seek to experience our services within the comforts of our tranquil incall locations or prefer the convenience of outcall arrangements, our highly skilled tantric masseuses are ready to cater to your needs. Take the first step towards a blissful encounter by contacting us today to secure a booking.",
+
+    "service-for-bg-text": "GOLD",
+    "service-for-tittle": "FOR MEN & WOMEN",
+    "service-for-description": "Tantric massage is to surrender to the present moment when the mind surrenders to the heart. A therapeutic massage aims to eradicate muscle tension and body ailments, whereas the Gold Tantric Massage utilises both relaxation and stimulation for enhancing pleasure. We focus on these different states of energy to intensify, as well as blissful rapture throughout the entire body. The concoction of different strokes and amazing massage touch reignites one’s inner passion and promotes one’s well-being. Feeling uplifted and free of tension, in return, helps you to focus on the more demanding side of life For the best Gold Tantric Massage can offer, is your perfect choice for an extraordinary massage which will revitalise your entire torso, re-kindle your energy and soothe your mind.",
+
+    "service-hot-bg": "HOT",
+    "service-hot-tittle": "HOT STONE MASSAGE",
+    "service-hot-description": "Hot Stone Massage is a combination of therapeutic massage with the additional luxury of applied warmed stones. A Hot Stone Massage can be ideal for clients who do not enjoy a deep tissue massage as the pressure can be less thanks to the utilization of the heat and the smoothed stones. The heated stones welcome a moist heat source directly to the deeper layer of muscle. Used in conjunction with traditional massage methods a hot stone massage helps to promote a deeper sense of healing and relaxation. The heat helps to deeper penetrate stiff and sore muscles, and opens them up to enhance the treatment. Whether you are looking for a lighter touch, or a deeper therapy, the Hot Stone Massage service will cater to your individual massage requirements. Warm your body, ease your muscles, and sooth your soul with this focused massage service.",
+
+    "sevice-price-bg-text": "PRICE",
+    "service-price-tittle": "SERVICES & PRICING",
+    "service-price-description": "THE PAYMENT MODES AVAILABLE ARE : (CASH ON DELIVERY - BANK TRANSFERT - CREDIT/DEBIT CARDS - PAYPAL - CRYPTOCURRENCIES,...)",
+
+    "contactsAboutDescriptionText": "We are specialized in providing yachts with well trained professional massage therapists for high quality massage services. We are based in Cannes & Monaco and operate 365 days per year 24h/24h you can expect a fast and efficient service from us, as we can service you with one or more of our masseurs and masseuses for a top class outcall massage treatment, in 2 hours. If you wish to make a longer booking for your yacht for a day’s cruise or longer, please contact us and we will do our best to meet your needs. If you want to contact us or book a therapist for your yacht, feel free to fill in our Online Booking Form or call us at +33 (6) 252 326 76 any day 24h/7 Alternatively, you can send us your message through the form below.",
+    "contacts-about-bg-text": "Contact Us",
+    "contacts-about-tittle": "HAVE QUESTIONS?",
+    "contactsAboutAboutBgText": "ABOUT",
+    "contactsAboutOpenBgText": "OPEN",
+    "contactsAboutContactsBgText": "US",
+    "contactsAboutAboutTittle": "ABOUT US",
+    "contactsAboutOpenTittle": "OPEN HOURS",
+    "contactsAboutContactsTittle": "CONTACTS",
+    "contactsAboutAboutDescription": "I Am An Exceptionally Talented Therapist Tantric Masseuse Based In Cannes",
+    "contactsMapTittle": "Our Location",
+
+    "booking-tittle": "Booking",
+    "booking-bg-text": "Booking",
+    "booking-description-text": "I work everyday of the week. I provide service between 24/7 I am a professional therapist with diploma. I provide classical and special services. I am located near the Palais of Festival and train station of Cannes . I serve in my place or i come in your hotel or office / home. I am respectful, talkative and playful person. I find being clean as very important for you and for me. Call me at or send message to my mobile number. Mobile phone number and I use Whatsapp as well, you can better write me there at first. Talk to you soon, thank you.",
+
+    "bookingForm": "Booking Form",
+    "nameLabel": "Name:",
+    "emailLabel": "Email:",
+    "submitButton": "Submit",
+    "thankYouMessage": "Thank you for your reservation, {{name}}!",
+    "reservationMessage": "Your reservation is for: {{date}}",
+    "namePlaceholder": "Enter your name",
+    "emailPlaceholder": "Enter your email address"
+
+
+}
